@@ -52,12 +52,12 @@ class HomeViewController: BaseMenuViewController, UICollectionViewDelegate, UICo
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         menuVC.delegate = self
         
     }
-    
+    deinit {
+        print("Home has been deinit")
+    }
     //Здесь описать загрузку данных
     override func viewWillAppear(_ animated: Bool) {
         web.urlRequest(url: "https://vseopecheni.ru/jsonmn/?key=hfiwehlgewjhg2342few", fileToWrite: "n5.dat")//

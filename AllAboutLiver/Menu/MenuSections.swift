@@ -16,7 +16,8 @@ struct Section {
 class MenuSections {
     
     
-    var sections = [Section(title: "Стол №5",               imageName: "n5",          filePath: "n5.dat"),
+    var sections = [
+                    Section(title: "Стол №5",               imageName: "n5",          filePath: "n5.dat"),
                     Section(title: "Рецепты стола №5",      imageName: "recipes",     filePath: ""),
                     Section(title: "Меню неделька",         imageName: "nedelka",     filePath: ""),
                     Section(title: "Гепатопротекторы",      imageName: "gepo",        filePath: ""),
