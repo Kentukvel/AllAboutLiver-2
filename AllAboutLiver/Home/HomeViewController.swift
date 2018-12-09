@@ -15,8 +15,14 @@ class HomeViewController: BaseMenuViewController, UICollectionViewDelegate, UICo
     var menuSections = MenuSections()
     var web = Web()
     var selectedIndex: IndexPath? {
-        didSet {
-            performSegue(withIdentifier: "toTable5Segue", sender: nil)
+        willSet {
+            switch newValue?.row {
+            case 0:
+                performSegue(withIdentifier: "toTable5Segue", sender: nil)
+            default:
+                break
+            }
+            
         }
     }
 //    var arrayOfData = [Any]() {

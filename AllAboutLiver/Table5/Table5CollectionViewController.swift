@@ -15,8 +15,9 @@ class CollectionViewController: BaseMenuViewController, UICollectionViewDelegate
     //MARK: - Variables
     var sections = MenuSections()
     var section: Section!
-    var arrayOfData: [Any]!
+    var arrayOfData: [JSONStructure]!
     var web = Web()
+    var selectedRow: Int?
     @IBAction func menuBarButtonItem(_ sender: UIBarButtonItem) {
         if AppDelegate.isMenuVC {
             showMenu()
@@ -47,36 +48,57 @@ class CollectionViewController: BaseMenuViewController, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Table5CollectionCell", for: indexPath) as! Table5CollectionViewCell
-        if let item = arrayOfData[indexPath.row] as? JSONStructure {
-            cell.table5ImageView.image = UIImage(named: images[item.id]!)
-        }
+        let item = arrayOfData[indexPath.row]
+        cell.table5ImageView.image = UIImage(named: images[item.id]!)
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        selectedRow = indexPath.row
+        goToOptionVC(row: selectedRow!)
     }
     
+    func goToOptionVC(row: Int) {
+        performSegue(withIdentifier: "table5OptionSegue", sender: nil)
+    }
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(arrayOfData)
+        //print(arrayOfData)
     }
     override func viewWillAppear(_ animated: Bool) {
         section = sections.sections[0]
         arrayOfData = web.getData(from: section.filePath)
-        print(arrayOfData)
+        //print(arrayOfData)
 
     }
 
-    /*
+    //убрать лишнее в тексте
+    func removeGarbage(from selected: JSONStructure) -> JSONStructure {
+        var newSelected = selected
+        var newMozhno = newSelected.appMozhno
+        var newNelzya = newSelected.appNelza
+        let haveToReplace = ["\r", "<ul class=\"mojno\">", "\t", "<li>", "</li>", "<ul class=\"nelzya\">", ";&nbsp;", "</ul>", "<span data-mce-mark=\"1\">", "</span>"]
+        for el in haveToReplace {
+            newMozhno = newMozhno.replacingOccurrences(of: el, with: "")
+            newNelzya = newNelzya.replacingOccurrences(of: el, with: "")
+        }
+        newSelected.appMozhno = newMozhno
+        newSelected.appNelza = newNelzya
+        return newSelected
+    }
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+       //Установим текст, который хотим отобразить
+        if segue.identifier == "table5OptionSegue" {
+            if let destinationVC = segue.destination as? Table5OptionViewController {
+                let selected = removeGarbage(from: arrayOfData[selectedRow!])
+                destinationVC.textToDisplay = "Можно\n" + selected.appMozhno + "\nНельзя\n" + selected.appNelza
+            }
+        }
     }
-    */
+ 
 
 }
