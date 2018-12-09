@@ -18,13 +18,8 @@ class CollectionViewController: BaseMenuViewController, UICollectionViewDelegate
     var arrayOfData: [JSONStructure]!
     var web = Web()
     var selectedRow: Int?
-    @IBAction func menuBarButtonItem(_ sender: UIBarButtonItem) {
-        if AppDelegate.isMenuVC {
-            showMenu()
-        } else {
-            hideMenu()
-        }
-    }
+    
+
     var images: [String : String] = ["8945" : "drinks",
                                      "8946" : "soups",
                                      "8947" : "kasha",

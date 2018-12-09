@@ -52,7 +52,7 @@ class HomeViewController: BaseMenuViewController, UICollectionViewDelegate, UICo
     //MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuVC.delegate = self
+        //menuVC.delegate = self
         
     }
     deinit {
@@ -64,36 +64,22 @@ class HomeViewController: BaseMenuViewController, UICollectionViewDelegate, UICo
         
     }
     
-    
-    //MARK: - Side Menu Methods
-    @IBAction func menuBarButtonItem(_ sender: UIBarButtonItem) {
-        if AppDelegate.isMenuVC {
-            showMenu()
-        } else {
-            hideMenu()
-        }
-    }
-    
 
     
     
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toTable5Segue" {
-            if let destinationVC = segue.destination as? CollectionViewController {
-                print(selectedIndex?.row)
-                
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//         
+//    }
  
 
 }
 
 //MARK: - MenuSelect Protocol
-extension HomeViewController : MenuSelect {
-    func menuSelected(indexPath: IndexPath) {
-        
-    }
-}
+//extension HomeViewController : MenuSelect {
+//    func menuSelected(indexPath: IndexPath) {
+//
+//    }
+//}

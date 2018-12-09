@@ -17,6 +17,13 @@ class BaseMenuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func menuBarButtonItem(_ sender: UIBarButtonItem) {
+        if AppDelegate.isMenuVC {
+            showMenu()
+        } else {
+            hideMenu()
+        }
+    }
     func showMenu() {
         UIView.animate(withDuration: 0.3) {
             self.menuVC.view.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
@@ -33,6 +40,12 @@ class BaseMenuViewController: UIViewController {
             self.menuVC.view.removeFromSuperview()
             AppDelegate.isMenuVC = true
         }
+    }
+    @IBAction func backBarButtonItem(_ sender: UIBarButtonItem) {
+        dismiss()
+    }
+    func dismiss() {
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

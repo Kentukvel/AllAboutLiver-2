@@ -69,7 +69,12 @@
                     <navigationItem key="navigationItem" title="Home" id="hoR-i4-NMB">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu-btn" id="fqK-KE-oj8">
                             <connections>
-                                <action selector="menuBarButtonItem:" destination="dyo-Y1-wNU" id="OBb-DD-JdN"/>
+                                <action selector="menuBarButtonItem:" destination="dyo-Y1-wNU" id="t7H-xS-YrN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Назад" id="ncH-ch-F6f">
+                            <connections>
+                                <action selector="backBarButtonItem:" destination="dyo-Y1-wNU" id="RrU-1Z-bvZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -211,7 +216,12 @@
                     <navigationItem key="navigationItem" title="Стол №5" id="azU-tT-cPt">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu-btn" id="cPY-PG-jYQ">
                             <connections>
-                                <action selector="menuBarButtonItem:" destination="FSC-Xc-9PI" id="D8d-XZ-f7o"/>
+                                <action selector="menuBarButtonItem:" destination="FSC-Xc-9PI" id="q0U-a4-7rx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Назад" id="R1x-Dg-P0F">
+                            <connections>
+                                <action selector="backBarButtonItem:" destination="FSC-Xc-9PI" id="j5I-4B-N6f"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -299,7 +309,7 @@
         <image name="menu-header" width="309" height="210"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="egU-bf-ymv"/>
-        <segue reference="m34-Sv-ApO"/>
+        <segue reference="3S0-lW-Cc2"/>
+        <segue reference="YYu-yq-XWl"/>
     </inferredMetricsTieBreakers>
 </document>
