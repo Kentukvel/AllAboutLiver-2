@@ -10,6 +10,7 @@ import UIKit
 
 class Table5OptionTableViewController: UITableViewController {
 
+    //текст что можно и нельзя
     var mozhno: [String] = []
     var nelzya: [String] = []
     
