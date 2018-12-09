@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol MenuSelect {
-    func menuSelected(indexPath: IndexPath)
-}
+//protocol MenuSelect {
+//    func menuSelected(indexPath: IndexPath)
+//}
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
-    var delegate : MenuSelect?
+    //var delegate : MenuSelect?
 
     @IBOutlet weak var menuTableVIew: UITableView!
     var menuSections = MenuSections()

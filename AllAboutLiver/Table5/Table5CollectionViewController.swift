@@ -88,9 +88,10 @@ class CollectionViewController: BaseMenuViewController, UICollectionViewDelegate
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        //Установим текст, который хотим отобразить
         if segue.identifier == "table5OptionSegue" {
-            if let destinationVC = segue.destination as? Table5OptionViewController {
+            if let destinationVC = segue.destination as? Table5OptionTableViewController {
                 let selected = removeGarbage(from: arrayOfData[selectedRow!])
-                destinationVC.textToDisplay = "Можно\n" + selected.appMozhno + "\nНельзя\n" + selected.appNelza
+                destinationVC.textMozhno = selected.appMozhno
+                destinationVC.textNelzya = selected.appNelza
             }
         }
     }

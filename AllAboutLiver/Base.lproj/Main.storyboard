@@ -226,45 +226,49 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="DQZ-qz-hIb" kind="show" identifier="table5OptionSegue" id="w1W-mF-0L1"/>
+                        <segue destination="MMP-pG-IPm" kind="show" identifier="table5OptionSegue" id="XFN-Zx-sjL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6a-cO-CRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2420" y="-724.58770614692662"/>
         </scene>
-        <!--Table5 Option View Controller-->
-        <scene sceneID="3YB-jb-p3j">
+        <!--Table5 Option Table View Controller-->
+        <scene sceneID="nOo-3E-Pjm">
             <objects>
-                <viewController id="DQZ-qz-hIb" customClass="Table5OptionViewController" customModule="AllAboutLiver" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Bt-g5-xhs">
+                <tableViewController id="MMP-pG-IPm" customClass="Table5OptionTableViewController" customModule="AllAboutLiver" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="flc-v5-H4X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xC3-jE-cOO">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="W7P-vv-S5e" firstAttribute="trailing" secondItem="xC3-jE-cOO" secondAttribute="trailing" constant="16" id="Uel-WD-zpw"/>
-                            <constraint firstItem="xC3-jE-cOO" firstAttribute="top" secondItem="W7P-vv-S5e" secondAttribute="top" id="ZcS-cV-URw"/>
-                            <constraint firstItem="xC3-jE-cOO" firstAttribute="leading" secondItem="W7P-vv-S5e" secondAttribute="leading" constant="16" id="bqp-VS-ss6"/>
-                            <constraint firstItem="xC3-jE-cOO" firstAttribute="bottom" secondItem="W7P-vv-S5e" secondAttribute="bottom" id="noU-0E-SOH"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="W7P-vv-S5e"/>
-                    </view>
-                    <connections>
-                        <outlet property="table5OptionTextView" destination="xC3-jE-cOO" id="1mQ-az-XLL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aCJ-ME-gTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Option5Cell" textLabel="xKW-50-v7j" style="IBUITableViewCellStyleDefault" id="8bi-je-saF">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8bi-je-saF" id="7lG-Sk-A1h">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xKW-50-v7j">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MMP-pG-IPm" id="Tkp-JH-Kmt"/>
+                            <outlet property="delegate" destination="MMP-pG-IPm" id="Ivy-5H-5eb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pvi-vx-Sef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3320.8000000000002" y="-725.48725637181417"/>
+            <point key="canvasLocation" x="3336.8000000000002" y="-725.48725637181417"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vL8-Xw-idf">

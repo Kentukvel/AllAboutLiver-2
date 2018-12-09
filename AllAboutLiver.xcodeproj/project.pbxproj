@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291C114E21BD7C8700E1EF26 /* Table5OptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291C114D21BD7C8700E1EF26 /* Table5OptionTableViewController.swift */; };
 		29C7172421BC587B00FA724C /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C7172321BC587B00FA724C /* Web.swift */; };
 		29C7175021BD263B00FA724C /* BaseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C7174F21BD263B00FA724C /* BaseMenuViewController.swift */; };
 		29C7175221BD2E0800FA724C /* Table5CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C7175121BD2E0800FA724C /* Table5CollectionViewCell.swift */; };
-		29C7175721BD34B300FA724C /* Table5OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C7175621BD34B300FA724C /* Table5OptionViewController.swift */; };
 		29F1AD0A21BC296A00D5F02D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F1AD0921BC296A00D5F02D /* AppDelegate.swift */; };
 		29F1AD0F21BC296A00D5F02D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F1AD0D21BC296A00D5F02D /* Main.storyboard */; };
 		29F1AD1221BC296A00D5F02D /* AllAboutLiver.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29F1AD1021BC296A00D5F02D /* AllAboutLiver.xcdatamodeld */; };
@@ -26,10 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		291C114D21BD7C8700E1EF26 /* Table5OptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table5OptionTableViewController.swift; sourceTree = "<group>"; };
 		29C7172321BC587B00FA724C /* Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
 		29C7174F21BD263B00FA724C /* BaseMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMenuViewController.swift; sourceTree = "<group>"; };
 		29C7175121BD2E0800FA724C /* Table5CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table5CollectionViewCell.swift; sourceTree = "<group>"; };
-		29C7175621BD34B300FA724C /* Table5OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table5OptionViewController.swift; sourceTree = "<group>"; };
 		29F1AD0621BC296A00D5F02D /* AllAboutLiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllAboutLiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29F1AD0921BC296A00D5F02D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29F1AD0E21BC296A00D5F02D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				29F1AD2C21BC539D00D5F02D /* Table5CollectionViewController.swift */,
-				29C7175621BD34B300FA724C /* Table5OptionViewController.swift */,
+				291C114D21BD7C8700E1EF26 /* Table5OptionTableViewController.swift */,
 				29C7175121BD2E0800FA724C /* Table5CollectionViewCell.swift */,
 			);
 			path = Table5;
@@ -193,8 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				29F1AD2D21BC539D00D5F02D /* Table5CollectionViewController.swift in Sources */,
-				29C7175721BD34B300FA724C /* Table5OptionViewController.swift in Sources */,
 				29C7175221BD2E0800FA724C /* Table5CollectionViewCell.swift in Sources */,
+				291C114E21BD7C8700E1EF26 /* Table5OptionTableViewController.swift in Sources */,
 				29F1AD2321BC2ED200D5F02D /* HomeViewController.swift in Sources */,
 				29F1AD1221BC296A00D5F02D /* AllAboutLiver.xcdatamodeld in Sources */,
 				29F1AD2921BC487E00D5F02D /* CollectionViewCell.swift in Sources */,
